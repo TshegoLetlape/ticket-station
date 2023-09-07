@@ -32,7 +32,8 @@ a,
 
 /* line 33, ../../Arafath/CL/December/236. Event-02/HTML/scss/theme-default.scss */
 a:focus,
-.button:focus, button:focus {
+.button:focus,
+button:focus {
   text-decoration: none;
   outline: none;
 }
@@ -53,14 +54,18 @@ a:hover,
 /* line 47, ../../Arafath/CL/December/236. Event-02/HTML/scss/theme-default.scss */
 a,
 button {
-  color: #1F1F1F;
+  color: #1f1f1f;
   outline: medium none;
 }
 
 /* line 52, ../../Arafath/CL/December/236. Event-02/HTML/scss/theme-default.scss */
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
   font-family: "Anton", sans-serif;
-  color: #001D38;
+  color: #001d38;
 }
 
 /* line 56, ../../Arafath/CL/December/236. Event-02/HTML/scss/theme-default.scss */
@@ -102,7 +107,7 @@ li {
 /* line 80, ../../Arafath/CL/December/236. Event-02/HTML/scss/theme-default.scss */
 p {
   font-size: 20px;
-  color: #AAB1B7;
+  color: #aab1b7;
   line-height: 32px;
   margin-bottom: 0;
   font-weight: 400;
@@ -257,9 +262,9 @@ h3 {
   height: 100%;
   left: 0;
   top: 0;
-  background: #001D38;
-  opacity: .6;
-  content: '';
+  background: #001d38;
+  opacity: 0.6;
+  content: "";
   z-index: -1;
 }
 
@@ -274,11 +279,29 @@ h3 {
   position: absolute;
   content: "";
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#5db2ff+0,7db9e8+100&1+24,0+96 */
-  background: -moz-linear-gradient(left, #5db2ff 0%, #65b4f9 24%, rgba(124, 185, 233, 0) 96%, rgba(125, 185, 232, 0) 100%);
+  background: -moz-linear-gradient(
+    left,
+    #5db2ff 0%,
+    #65b4f9 24%,
+    rgba(124, 185, 233, 0) 96%,
+    rgba(125, 185, 232, 0) 100%
+  );
   /* FF3.6-15 */
-  background: -webkit-linear-gradient(left, #5db2ff 0%, #65b4f9 24%, rgba(124, 185, 233, 0) 96%, rgba(125, 185, 232, 0) 100%);
+  background: -webkit-linear-gradient(
+    left,
+    #5db2ff 0%,
+    #65b4f9 24%,
+    rgba(124, 185, 233, 0) 96%,
+    rgba(125, 185, 232, 0) 100%
+  );
   /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to right, #5db2ff 0%, #65b4f9 24%, rgba(124, 185, 233, 0) 96%, rgba(125, 185, 232, 0) 100%);
+  background: linear-gradient(
+    to right,
+    #5db2ff 0%,
+    #65b4f9 24%,
+    rgba(124, 185, 233, 0) 96%,
+    rgba(125, 185, 232, 0) 100%
+  );
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5db2ff', endColorstr='#007db9e8',GradientType=1 );
   /* IE6-9 */
@@ -325,7 +348,7 @@ h3 {
   left: 50px;
   font-size: 15px;
   line-height: 50px;
-  border: 1px solid #4D6174;
+  border: 1px solid #4d6174;
   left: 150px;
   color: #fff;
 }
@@ -357,7 +380,7 @@ h3 {
 /* line 290, ../../Arafath/CL/December/236. Event-02/HTML/scss/theme-default.scss */
 .owl-carousel:hover .owl-nav div:hover {
   color: #fff;
-  background: #001D38;
+  background: #001d38;
   border: 1px solid transparent;
 }
 
@@ -441,7 +464,7 @@ h3 {
   position: fixed;
   right: 20px;
   bottom: 20px;
-  background: #FF4533;
+  background: #ff4533;
   z-index: 99;
   width: 40px;
   height: 40px;

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>FestiPass</title>
+    <title>MusicEve</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -59,24 +59,20 @@
                   <div class="main-menu d-none d-lg-block">
                     <nav>
                       <ul id="navigation">
-                        <li><a href="index.html">home</a></li>
-                        <li><a href="performer.html">Headliners</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#headliners">Headliners</a></li>
 
                         <li>
-                          <a href="#">pages <i class="ti-angle-down"></i></a>
+                          <a href="#"
+                            >Event Details <i class="ti-angle-down"></i
+                          ></a>
                           <ul class="submenu">
-                            <li><a href="about.html">about</a></li>
-                            <li><a href="Program.html">Program</a></li>
-                            <li><a href="Venue.html">Venue</a></li>
-                            <li><a href="elements.html">elements</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#venue">Venue</a></li>
                           </ul>
                         </li>
                         <li>
-                          <a href="#">Tickets <i class="ti-angle-down"></i></a>
-                          <ul class="submenu">
-                            <li><a href="blog.html">blog</a></li>
-                            <li><a href="single-blog.html">single-blog</a></li>
-                          </ul>
+                          <a href="tickets.html">Tickets</a>
                         </li>
                         <li><a href="contact.html">Contact</a></li>
                       </ul>
@@ -86,7 +82,7 @@
                 <div class="col-xl-3 col-lg-3 d-none d-lg-block">
                   <div class="buy_tkt">
                     <div class="book_btn d-none d-lg-block">
-                      <a href="#">Buy Tickets</a>
+                      <a href="#">Login</a>
                     </div>
                   </div>
                 </div>
@@ -103,7 +99,7 @@
 
     <!-- slider_area_start -->
     <div class="slider_area">
-      <div class="single_slider d-flex align-items-center slider_bg_1 overlay">
+      <div class="single_slider d-flex align-items-center slider_bg_1">
         <div class="container">
           <div class="row align-items-center justify-content-center">
             <div class="col-xl-12">
@@ -113,14 +109,14 @@
                   data-wow-duration="1s"
                   data-wow-delay=".4s"
                 >
-                  FestiPass 2023
+                  Music Eve
                 </h3>
                 <p
                   class="wow fadeInLeft"
                   data-wow-duration="1s"
                   data-wow-delay=".5s"
                 >
-                  FNB Stadium, Johannesburg - Dec 31st
+                  FNB Stadium, Johannesburg - 31 Dec 2023
                 </p>
               </div>
             </div>
@@ -131,7 +127,7 @@
     <!-- slider_area_end -->
 
     <!-- performar_area_start  -->
-    <div class="performar_area black_bg">
+    <div id="headliners" class="performar_area black_bg">
       <div class="container">
         <div class="row">
           <div class="col-lg-12">
@@ -175,7 +171,7 @@
                   </div>
                   <div class="performer_heading">
                     <h4>Drake</h4>
-                    <span>...</span>
+                    <span>King of Modern Day Rap</span>
                   </div>
                 </div>
               </div>
@@ -190,7 +186,7 @@
                   </div>
                   <div class="performer_heading">
                     <h4>SZA</h4>
-                    <span>Neo Soul Singer</span>
+                    <span>R&B/Soul Singer</span>
                   </div>
                 </div>
               </div>
@@ -217,7 +213,7 @@
     <!-- performar_area_end  -->
 
     <!-- about_area_start  -->
-    <div class="about_area black_bg">
+    <div id="about" class="about_area black_bg">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-8">
@@ -234,8 +230,8 @@
                 data-wow-duration="1s"
                 data-wow-delay=".4s"
               >
-                Since 2018, FestiPass has been your ticket to unforgettable New
-                Year's Eve festivities with international artists. We're all
+                Since 2018, Music Eve™️ has been your ticket to unforgettable
+                New Year's Eve festivities with international artists. We're all
                 about music, fun, and bringing people together for the best time
                 of their lives. Join us in celebrating the New Year through live
                 performances and shared musical experiences
@@ -291,7 +287,7 @@
     </div>
     <!-- about_area_end  -->
 
-    <div class="program_details_area detials_bg_1 overlay2">
+    <div class="program_details_area detials_bg_1">
       <div class="container">
         <div class="row">
           <div class="col-lg-12">
@@ -498,12 +494,8 @@
       </div>
     </div>
 
-    <!-- Past Events -->
-
-    <!-- past events ends -->
-
     <!-- map_area_start  -->
-    <div class="map_area">
+    <div id="venue" class="map_area">
       <div
         id="map"
         style="height: 600px; position: relative; overflow: hidden"

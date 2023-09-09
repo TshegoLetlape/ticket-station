@@ -722,12 +722,12 @@ h3 {
 
 /* line 159, ../../Arafath/CL/December/236. Event-02/HTML/scss/_btn.scss */
 .line-button:hover {
-  color: #009dff;
+  color: #c38154;
 }
 
 /* line 162, ../../Arafath/CL/December/236. Event-02/HTML/scss/_btn.scss */
 .line-button:hover::before {
-  background: #009dff;
+  background: #c38154;
 }
 
 /* line 166, ../../Arafath/CL/December/236. Event-02/HTML/scss/_btn.scss */
@@ -1504,8 +1504,27 @@ h3 {
 }
 
 /* line 1, ../../Arafath/CL/December/236. Event-02/HTML/scss/_slider.scss */
-.slider_bg_1 {
-  background-image: url(../img/banner/banner.png);
+
+#background-video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+@media (max-width: 750px) {
+  #background-video {
+    display: none;
+  }
+  body {
+    background: url("/img/banner/banner.PNG") no-repeat;
+    background-size: cover;
+  }
 }
 
 /* line 4, ../../Arafath/CL/December/236. Event-02/HTML/scss/_slider.scss */

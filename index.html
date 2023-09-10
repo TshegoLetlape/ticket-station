@@ -5,10 +5,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <title>MusicEve</title>
     <meta name="description" content="" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1 maximum-scale=1"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- <link rel="manifest" href="site.webmanifest"> -->
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png" />
@@ -31,6 +28,14 @@
   </head>
 
   <body>
+    <!--[if lte IE 9]>
+      <p class="browserupgrade">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="https://browsehappy.com/">upgrade your browser</a> to improve
+        your experience and security.
+      </p>
+    <![endif]-->
+
     <!-- header-start -->
     <header>
       <div class="header-area">
@@ -56,34 +61,32 @@
                       <ul id="navigation">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="#headliners">Headliners</a></li>
-                        <li>
-                          <a href="tickets.html">Tickets</a>
-                        </li>
+
                         <li>
                           <a href="#"
                             >Event Details <i class="ti-angle-down"></i
                           ></a>
                           <ul class="submenu">
                             <li><a href="#about">About</a></li>
-                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="#venue">Venue</a></li>
                             <li>
-                              <a href="blog.html">Blog</a>
+                              <a href="blog.html">blog</a>
                             </li>
                           </ul>
                         </li>
+
+                        <li>
+                          <a href="tickets.html">Tickets</a>
+                        </li>
+                        <li><a href="contact.html">Contact</a></li>
                       </ul>
                     </nav>
                   </div>
                 </div>
                 <div class="col-xl-3 col-lg-3 d-none d-lg-block">
-                  <div class="search-login-container">
-                    <form class="search-form">
-                      <input type="search" placeholder="Search..." />
-                    </form>
-                    <div class="buy_tkt">
-                      <div class="book_btn d-none d-lg-block">
-                        <a href="#">Login</a>
-                      </div>
+                  <div class="buy_tkt">
+                    <div class="book_btn d-none d-lg-block">
+                      <a href="#">Login</a>
                     </div>
                   </div>
                 </div>
@@ -260,10 +263,10 @@
                 data-wow-delay=".4s"
               >
                 Since 2018, Music Eve™️ has been your ticket to unforgettable
-                New Year's Eve festivities. We're all about brining "World
-                Tours" to Africa, good music,and bringing people together for
-                the best time of their lives. Join us in celebrating the New
-                Year through live performances and shared musical experiences
+                New Year's Eve festivities with international artists. We're all
+                about music, fun, and bringing people together for the best time
+                of their lives. Join us in celebrating the New Year through live
+                performances and shared musical experiences
               </p>
             </div>
           </div>
@@ -303,7 +306,7 @@
                 one.
               </p>
               <a
-                href="tickets.html"
+                href="#"
                 class="boxed-btn3 wow fadeInLeft"
                 data-wow-duration="1s"
                 data-wow-delay=".7s"
@@ -520,43 +523,39 @@
       </div>
 
       <!-- map_area_start  -->
-      <div class="">
-        <div>
-          <div id="venue" class="map_area">
-            <div
-              id="map"
-              style="height: 0px; position: relative; overflow: hidden"
-            ></div>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3578.828789287767!2d27.980080474511663!3d-26.234752065217133!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e95090d44757ecb%3A0x12892e9b33f65a14!2sFNB%20Stadium!5e0!3m2!1sen!2sza!4v1694291629466!5m2!1sen!2sza"
-              width="1348"
-              height="400"
-              style="border: 0"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
-            <br />
-            <div
-              class="location_information black_bg wow fadeInUp"
-              data-wow-duration="1s"
-              data-wow-delay=".3s"
-            >
-              <h3 id="contact">Music Eve 2023</h3>
-              <div class="info_wrap">
-                <div class="single_info">
-                  <span>Venue:</span>
-                  <p>FNB Stadium, Johannesburg</p>
-                </div>
-                <div class="single_info">
-                  <span>Phone:</span>
-                  <p>+27 (11) 269 3682</p>
-                </div>
-                <div class="single_info">
-                  <span>Email:</span>
-                  <p>contact@musiceve2023.com</p>
-                </div>
-              </div>
+      <div id="venue" class="map_area">
+        <div
+          id="map"
+          style="height: 0px; position: relative; overflow: hidden"
+        ></div>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3578.828789287767!2d27.980080474511663!3d-26.234752065217133!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e95090d44757ecb%3A0x12892e9b33f65a14!2sFNB%20Stadium!5e0!3m2!1sen!2sza!4v1694291629466!5m2!1sen!2sza"
+          width="1348"
+          height="400"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+        <br />
+        <div
+          class="location_information black_bg wow fadeInUp"
+          data-wow-duration="1s"
+          data-wow-delay=".3s"
+        >
+          <h3 id="contact">Music Eve 2023</h3>
+          <div class="info_wrap">
+            <div class="single_info">
+              <span>Venue:</span>
+              <p>FNB Stadium, Johannesburg</p>
+            </div>
+            <div class="single_info">
+              <span>Phone:</span>
+              <p>+27 (11) 269 3682</p>
+            </div>
+            <div class="single_info">
+              <span>Email:</span>
+              <p>contact@musiceve2023.com</p>
             </div>
           </div>
         </div>
@@ -633,10 +632,11 @@
                     data-wow-duration="1s"
                     data-wow-delay=".5s"
                   >
-                    Making "World Tours" include Africa one Music Eve at a time.
+                    The event regularly attracts a diverse range of attendees
+                    from around the world.
                   </p>
                   <a
-                    href="tickets.html"
+                    href="#"
                     class="boxed-btn3 wow fadeInUp"
                     data-wow-duration="1s"
                     data-wow-delay=".6s"
@@ -660,7 +660,7 @@
                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                 Coded By:
                 <a href="" target="_blank"
-                  >Tshego, Kissmart, Tenyeko & Khadijah</a
+                  >Kissmart, Khadijah, Tenyeko & Tshego</a
                 >
                 <script>
                   document.write(new Date().getFullYear());
@@ -668,7 +668,18 @@
                 &copy;
                 <i class="fa fa-heart-o" aria-hidden="true"></i>
                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-              </p>
+              </p><b><br>
+              </b>
+              <!-- social media handles  -->
+              <div class="d-flex justify-content-center" >
+                <ul class="social-icons">
+                    <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>&nbsp&nbsp&nbsp&nbsp
+                    <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>&nbsp&nbsp&nbsp&nbsp
+                    <li><a class="linkedin" href="#"><i class="fa fa-instagram"></i></a></li>&nbsp&nbsp&nbsp&nbsp 
+                    <li><a class="youtube" href="#"><i class="fa fa-youtube"></i></a></li>   
+                </ul>
+              </div>                     
+              <!-- social media handles end -->
             </div>
           </div>
         </div>
@@ -707,3 +718,4 @@
     <script src="js/main.js"></script>
   </body>
 </html>
+

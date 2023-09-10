@@ -122,48 +122,6 @@
     <section class="contact-section">
       <div class="container">
         <div class="d-none d-sm-block mb-5 pb-4">
-          <div
-            id="map"
-            style="height: 480px; position: relative; overflow: hidden"
-          ></div>
-          <script>
-            function initMap() {
-              var uluru = {
-                lat: -25.363,
-                lng: 131.044,
-              };
-              var grayStyles = [
-                {
-                  featureType: "all",
-                  stylers: [
-                    {
-                      saturation: -90,
-                    },
-                    {
-                      lightness: 50,
-                    },
-                  ],
-                },
-                {
-                  elementType: "labels.text.fill",
-                  stylers: [
-                    {
-                      color: "#ccdee9",
-                    },
-                  ],
-                },
-              ];
-              var map = new google.maps.Map(document.getElementById("map"), {
-                center: {
-                  lat: -31.197,
-                  lng: 150.744,
-                },
-                zoom: 9,
-                styles: grayStyles,
-                scrollwheel: false,
-              });
-            }
-          </script>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3578.828789287767!2d27.980080474511663!3d-26.234752065217133!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e95090d44757ecb%3A0x12892e9b33f65a14!2sFNB%20Stadium!5e0!3m2!1sen!2sza!4v1694291629466!5m2!1sen!2sza"
             width="1100"

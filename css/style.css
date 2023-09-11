@@ -5841,7 +5841,8 @@ h6 {
 
 /* social media handles */
 /* Center the icons horizontally and vertically */
-body, html {
+body,
+html {
   height: 100%;
   margin: 0;
   padding: 0;
@@ -5851,8 +5852,8 @@ body, html {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh; 
-  background-color: black; 
+  min-height: 100vh;
+  background-color: black;
 }
 
 .social-icons {
@@ -5862,17 +5863,33 @@ body, html {
 }
 
 .social-icons li {
-  margin-right: 10px; 
+  margin-right: 10px;
 }
 
 /* Style for the icon links */
 .social-icons a {
   text-decoration: none;
-  color: white; 
-  font-size: 2em; 
+  color: white;
+  font-size: 2em;
 }
 
 /* Hover effect for the icon links */
 .social-icons a:hover {
-  color: #C38154; 
+  color: #c38154;
+}
+.search-login-container {
+  display: flex;
+  align-items: center;
+}
+.search-form {
+  margin-right: 10px;
+}
+.search-form input[type="search"] {
+  border: none;
+  background: transparent;
+  padding: 7px 8px;
+  font-size: 14px;
+  color: inherit;
+  border: 1px solid currentColor;
+  border-radius: 15px;
 }

@@ -1178,9 +1178,21 @@ h3 {
 @media (min-width: 992px) and (max-width: 1200px) {
   /* line 100, ../../Arafath/CL/December/236. Event-02/HTML/scss/_header.scss */
   .header-area .main-header-area .buy_tkt .book_btn a {
-    padding: 12px 20px;
+    background: #fff;
+
+    font-family: "Anton", sans-serif;
+    padding: 12px 40px;
+    font-size: 16px;
+    font-weight: 500;
+    border: 1px solid transparent;
+  
+    color: #000;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 25px;
+    text-transform: capitalize;
   }
-}
+  }
 
 /* line 113, ../../Arafath/CL/December/236. Event-02/HTML/scss/_header.scss */
 .header-area .main-header-area .buy_tkt .book_btn a:hover {
@@ -1201,6 +1213,28 @@ h3 {
   position: relative;
   margin: 0 20px;
 }
+
+/* search button  */
+.search-login-container {
+  display: flex;
+  align-items: center;
+}
+
+.search-form {
+  margin-right: 10px;
+}
+
+.search-form input [type="search"]{
+  border: none;
+  background: transparent;
+  padding: 7px 8px;
+  font-size: 14px;
+  color: inherit;
+  border: 1 solid currentColor;
+  border-radius: 15px;
+
+}
+/* search button end  */
 
 @media (min-width: 992px) and (max-width: 1200px) {
   /* line 126, ../../Arafath/CL/December/236. Event-02/HTML/scss/_header.scss */

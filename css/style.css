@@ -5938,8 +5938,8 @@ html {
   display: inline-block;
   padding: 5px 20px;
   font-family: "Anton", sans-serif;
-  font-size: 16px;
-  font-weight: 500;
+  font-size: 18px;
+  font-weight: 300;
   border: 0;
   border: 1px solid #c38154;
   border-radius: 25px;
@@ -5949,7 +5949,6 @@ html {
   cursor: pointer;
 }
 
-/* line 15, ../../Arafath/CL/December/236. Event-02/HTML/scss/_btn.scss */
 .btn-block:hover {
   background: #fff;
   color: #c38154 !important;

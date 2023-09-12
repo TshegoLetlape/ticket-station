@@ -2328,6 +2328,7 @@ h3 {
 /* line 24, ../../Arafath/CL/December/236. Event-02/HTML/scss/_performer.scss */
 .performar_area .single_performer .thumb img {
   width: 100%;
+  border-radius: 30px;
 }
 
 /* line 28, ../../Arafath/CL/December/236. Event-02/HTML/scss/_performer.scss */

@@ -338,6 +338,27 @@
                 <script>
                   document.write(new Date().getFullYear());
                 </script>
+                <script>
+                  document.addEventListener("DOMContentLoaded", function () {
+                    
+                    function submitForm(event) {
+                      event.preventDefault();
+            
+                      
+                      setTimeout(function () {
+                        alert("Message sent successfully");
+                        
+                        document.getElementById("contactForm").reset();
+                      }, 1000); 
+                    }
+            
+                    
+                    var contactForm = document.getElementById("contactForm");
+                    if (contactForm) {
+                      contactForm.addEventListener("submit", submitForm);
+                    }
+                  });
+                </script>
                 All rights reserved | This template is made with
                 <i class="fa fa-heart-o" aria-hidden="true"></i> by
                 <a href="https://colorlib.com" target="_blank">Colorlib</a>

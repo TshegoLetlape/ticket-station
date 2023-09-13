@@ -82,17 +82,20 @@
                 </div>
                 <div class="col-xl-3 col-lg-3 d-none d-lg-block">
                   <div class="search-login-container">
-                   <div class="col-xl-3 col-lg-3 d-none d-lg-block">
-  <div class="search-login-container">
-    <form class="search-form" action="#" method="GET">
-      <input type="search" placeholder="Search..." name="q" id="search-input" />
-      <button type="submit" class="search-button">
-        <i class="fa fa-search"></i>
-      </button>
-    </form>
-    <div class="buy_tkt">
-      <div class="book_btn d-none d-lg-block">
-        <a href="login.html">Login</a>
+                    <form class="search-form" action="#" method="GET">
+                      <input
+                        type="search"
+                        placeholder="Search..."
+                        name="q"
+                        id="search-input"
+                      />
+                      <button type="submit" class="search-button">
+                        <i class="fa fa-search"></i>
+                      </button>
+                    </form>
+                    <div class="buy_tkt">
+                      <div class="book_btn d-none d-lg-block">
+                        <a href="login.html">Login</a>
                       </div>
                     </div>
                   </div>
@@ -743,24 +746,24 @@
 
     <script src="js/main.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-  $(document).ready(function () {
-    $(".search-form").on("submit", function (e) {
-      e.preventDefault();
-      const searchTerm = $("#search-input").val().toLowerCase();
+    <script>
+      $(document).ready(function () {
+        $(".search-form").on("submit", function (e) {
+          e.preventDefault();
+          const searchTerm = $("#search-input").val().toLowerCase();
 
-      // I have implemented my search logic here
-      // You can search for keywords or artist names and redirect to the respective pages.
-      if (searchTerm.includes("About The Event")) {
-        // Redirect to upcoming events page
-        window.location.href = "about-the-event.html";
-      } else {
-        // Redirect to artist search page or perform a search and display results.
-        // Replace 'artist-search.html' with the actual URL or search endpoint.
-        window.location.href = `about-the-event.html?q=${searchTerm}`;
-      }
-    });
-  });
-  </script>
+          // I have implemented my search logic here
+          // You can search for keywords or artist names and redirect to the respective pages.
+          if (searchTerm.includes("About The Event")) {
+            // Redirect to upcoming events page
+            window.location.href = "about-the-event.html";
+          } else {
+            // Redirect to artist search page or perform a search and display results.
+            // Replace 'artist-search.html' with the actual URL or search endpoint.
+            window.location.href = `about-the-event.html?q=${searchTerm}`;
+          }
+        });
+      });
+    </script>
   </body>
 </html>

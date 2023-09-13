@@ -81,20 +81,10 @@
                   </div>
                 </div>
                 <div class="col-xl-3 col-lg-3 d-none d-lg-block">
-                  <div class="search-login-container">
-                    <form class="search-form" action="#" method="GET">
-                      <input
-                        type="search"
-                        placeholder="Search..."
-                        name="q"
-                        id="search-input"
-                      />
-                      <button type="submit" class="search-button">
-                        <i class="fa fa-search"></i>
-                      </button>
-                    </form>
-                    <div class="buy_tkt">
-                      <div class="book_btn d-none d-lg-block">
+               <input type="text" id="searchInput" placeholder="Search for events or artists">
+                  <button onclick="search()">Search</button>
+                    <div id="searchResults">
+                    </div>
                         <a href="login.html">Login</a>
                       </div>
                     </div>
@@ -747,20 +737,26 @@
     <script src="js/main.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-      $(document).ready(function () {
-        $(".search-form").on("submit", function (e) {
-          e.preventDefault();
-          const searchTerm = $("#search-input").val().toLowerCase();
+  function search() {
+  var searchInput = document.getElementById("searchInput").value;
+  var searchResults = document.getElementById("searchResults");
 
-          // I have implemented my search logic here
-          // You can search for keywords or artist names and redirect to the respective pages.
-          if (searchTerm.includes("About The Event")) {
-            // Redirect to upcoming events page
-            window.location.href = "about-the-event.html";
-          } else {
-            // Redirect to artist search page or perform a search and display results.
-            // Replace 'artist-search.html' with the actual URL or search endpoint.
-            window.location.href = `about-the-event.html?q=${searchTerm}`;
+  // Perform search logic here, matching keywords or artist names with upcoming events
+
+  var results = [
+    { title: "MusicEvent", artist: "Beyonce" },
+    { title: "MusicEvent", artist: "Burna Boy" },
+    { title: "MusicEvent", artist: "SZA" }
+  ];
+
+  // Display search results
+  searchResults.innerHTML = "";
+  for (var i = 0; i < results.length; i++) {
+    var result = results[i];
+    var resultElement = document.createElement("div");
+    resultElement.innerHTML = "<h3>" + result.title + "</h3><p>Artist: " + result.artist + "</p>";
+    searchResults.appendChild(resultElement);
+  }
           }
         });
       });

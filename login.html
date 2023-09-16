@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Login Page</title>
     <style>
-      .gradient-custom {
+        .gradient-custom {
         /* fallback for old browsers */
         background: #eac696;
 
@@ -33,94 +33,125 @@
         margin-right: 24px;
       }
     </style>
-  </head>
-  <body>
-    <section class="vh-100 gradient-custom">
-      <div class="container py-5 h-100">
+</head>
+<body>
+<section class="vh-100 gradient-custom">
+    <div class="container py-5 h-100">
         <div class="row d-flex justify-content-center align-items-center h-100">
-          <div class="col-12 col-md-8 col-lg-6 col-xl-5">
-            <div class="card bg-dark text-white" style="border-radius: 1rem">
-              <div class="card-body p-5 text-center">
-                <div class="mb-md-5 mt-md-4 pb-5">
-                  <h2 class="fw-bold mb-2 text-uppercase">LOGIN</h2>
-                  <p class="text-white-50 mb-5">
-                    Please enter your login and password!
-                  </p>
+            <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                <div class="card bg-dark text-white" style="border-radius: 1rem">
+                    <div class="card-body p-5 text-center">
+                        <div class="mb-md-5 mt-md-4 pb-5">
+                            <h2 class="fw-bold mb-2 text-uppercase">LOGIN</h2>
+                            <p class="text-white-50 mb-5">Please enter your login and password!</p>
 
-                  <div class="form-outline form-white mb-4">
-                    <input
-                      type="email"
-                      id="typeEmailX"
-                      class="form-controlone form-control-lg"
-                    />
-                    <label class="form-label" for="typeEmailX">Email</label>
-                  </div>
-                  <br />
-                  <div class="form-outline form-white mb-4">
-                    <input
-                      type="password"
-                      id="typePasswordX"
-                      class="form-control form-control-lg"
-                    />
-                    <label class="form-label" for="typePasswordX"
-                      >Password</label
-                    >
-                  </div>
+                            <div class="form-outline form-white mb-4">
+                                <input
+                                        type="email"
+                                        id="typeEmailX"
+                                        class="form-controlone form-control-lg"
+                                />
+                                <label class="form-label" for="typeEmailX">Email</label>
+                            </div>
+                            <br/>
+                            <div class="form-outline form-white mb-4">
+                                <input
+                                        type="password"
+                                        id="typePasswordX"
+                                        class="form-control form-control-lg"
+                                />
+                                <label class="form-label" for="typePasswordX">Password</label>
+                            </div>
 
-                  <p class="small mb-5 pb-lg-2">
-                    <a class="text-white-50" href="#!">Forgot password?</a>
-                  </p>
-                  <button
-                    class="btn btn-outline-light btn-lg px-5"
-                    type="button"
-                    id="loginButton"
-                  >
-                    Login
-                  </button>
-                  </a>
-                  <div
-                    class="d-flex justify-content-center text-center mt-4 pt-1"
-                  >
-                    <a href="#!" class="text-white"
-                      ><i class="fab fa-facebook-f fa-lg"></i
-                    ></a>
-                    <a href="#!" class="text-white"
-                      ><i class="fab fa-twitter fa-lg mx-4 px-2"></i
-                    ></a>
-                    <a href="#!" class="text-white"
-                      ><i class="fab fa-google fa-lg"></i
-                    ></a>
-                  </div>
+                            <p class="small mb-5 pb-lg-2">
+                                <a class="text-white-50" href="#!">Forgot password?</a>
+                            </p>
+                            <button
+                                    class="btn btn-outline-light btn-lg px-5"
+                                    type="button"
+                                    id="loginButton"
+                            >
+                                Login
+                            </button>
+                            <div class="d-flex justify-content-center text-center mt-4 pt-1">
+                                <a href="#!" class="text-white"
+                                ><i class="fab fa-facebook-f fa-lg"></i
+                                    ></a>
+                                <a href="#!" class="text-white"
+                                ><i class="fab fa-twitter fa-lg mx-4 px-2"></i
+                                    ></a>
+                                <a href="#!" class="text-white"
+                                ><i class="fab fa-google fa-lg"></i
+                                    ></a>
+                            </div>
+                        </div>
+
+                        <div>
+                            <p class="mb-0">
+                                Don't have an account?
+                                <a href="#!" class="text-white-50 fw-bold">Sign Up</a>
+                            </p>
+                        </div>
+                    </div>
                 </div>
-
-                <div>
-                  <p class="mb-0">
-                    Don't have an account?
-                    <a href="#!" class="text-white-50 fw-bold">Sign Up</a>
-                  </p>
-                </div>
-              </div>
             </div>
-          </div>
         </div>
-      </div>
-    </section>
+    </div>
+</section>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
+<script>
+    class User {
+        constructor(email, password) {
+            this.email = email;
+            this.password = password;
+        }
+
+        login() {
+            // Simulate a login process
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    if (this.email === "kissmart@musiceve.com" && this.password === "123456789") {
+                        resolve();
+                    } else {
+                        reject("Invalid credentials");
+                    }
+                }, 2000); // Simulate a 2-second delay
+            });
+        }
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
         const loginButton = document.querySelector("#loginButton");
-        loginButton.addEventListener("click", function () {
-          // Display "Logging in..." message
-          loginButton.innerHTML = "Logging in...";
-          loginButton.disabled = true;
+        const emailInput = document.querySelector("#typeEmailX");
+        const passwordInput = document.querySelector("#typePasswordX");
 
-          // Simulate a 15-second delay
-          setTimeout(function () {
-            // Redirect to index.html after 15 seconds
-            window.location.href = "index.html";
-          }, 5000); // 5 seconds in milliseconds
+        loginButton.addEventListener("click", function () {
+            const email = emailInput.value;
+            const password = passwordInput.value;
+
+            const user = new User(email, password);
+
+            // Display "Logging in..." message
+            loginButton.innerHTML = "Logging in...";
+            loginButton.disabled = true;
+
+            user.login()
+                .then(() => {
+                    // Redirect to index.html after successful login
+                    window.location.href = "index.html";
+                })
+                .catch((error) => {
+                    // Display an error message
+                    alert(error);
+                })
+                .finally(() => {
+                    // Restore the login button text and enable it
+                    loginButton.innerHTML = "Login";
+                    loginButton.disabled = false;
+                });
         });
-      });
-    </script>
-  </body>
+    });
+</script>
+</body>
 </html>
+

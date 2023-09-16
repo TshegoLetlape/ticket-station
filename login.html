@@ -70,15 +70,13 @@
                   <p class="small mb-5 pb-lg-2">
                     <a class="text-white-50" href="#!">Forgot password?</a>
                   </p>
-                  <a href="index.html">
-                    <button
-                      class="btn btn-outline-light btn-lg px-5"
-                      type="submit"
-                    >
-                      Login
-                    </p>
-                    <a href="index.html"> 
-                    </button>
+                  <button
+                    class="btn btn-outline-light btn-lg px-5"
+                    type="button"
+                    id="loginButton"
+                  >
+                    Login
+                  </button>
                   </a>
                   <div
                     class="d-flex justify-content-center text-center mt-4 pt-1"
@@ -107,5 +105,22 @@
         </div>
       </div>
     </section>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const loginButton = document.querySelector("#loginButton");
+        loginButton.addEventListener("click", function () {
+          // Display "Logging in..." message
+          loginButton.innerHTML = "Logging in...";
+          loginButton.disabled = true;
+
+          // Simulate a 15-second delay
+          setTimeout(function () {
+            // Redirect to index.html after 15 seconds
+            window.location.href = "index.html";
+          }, 5000); // 5 seconds in milliseconds
+        });
+      });
+    </script>
   </body>
 </html>

@@ -64,7 +64,7 @@
 
     <p>Please note that Musiceve cannot be held responsible for orders placed incorrectly on our App, even if the error was in good faith.</p>
 
-    <button id="checkoutButton" onclick="checkout()">Checkout</button>
+    <button id="checkoutButton">Checkout</button>
 
     <div id="loadingOverlay" class="overlay">
         <div class="loader"></div>
@@ -76,33 +76,43 @@
     </div>
 
     <script>
-        function checkout() {
-            // Disable the checkout button
-            const checkoutButton = document.getElementById('checkoutButton');
-            checkoutButton.disabled = true;
+        class PaymentConfirmation {
+            constructor() {
+                this.checkoutButton = document.getElementById('checkoutButton');
+                this.loadingOverlay = document.getElementById('loadingOverlay');
+                this.successPopup = document.getElementById('successPopup');
+                this.checkoutButton.addEventListener('click', () => this.checkout());
+            }
 
-            // Show loading overlay
-            const loadingOverlay = document.getElementById('loadingOverlay');
-            loadingOverlay.style.display = 'block';
+            checkout() {
+                this.checkoutButton.disabled = true;
+                this.loadingOverlay.style.display = 'block';
 
-            // Simulate a 30-second payment process (you can replace this with your actual payment logic)
-            setTimeout(() => {
-                // Hide loading overlay
-                loadingOverlay.style.display = 'none';
-
-                // Show success popup
-                const successPopup = document.getElementById('successPopup');
-                successPopup.style.display = 'block';
-
-                // Re-enable the checkout button
-                checkoutButton.disabled = false;
-
-                // Close the success popup after 3 seconds (optional)
+                // Simulate a 3-second payment process (adjust the time as needed)
                 setTimeout(() => {
-                    successPopup.style.display = 'none';
-                }, 3000);
-            }, 30000); // Simulate a 30-second payment process
+                    this.loadingOverlay.style.display = 'none';
+                    this.successPopup.style.display = 'block';
+
+                    // Re-enable the checkout button
+                    this.checkoutButton.disabled = false;
+
+                    // Close the success popup after 3 seconds
+                    setTimeout(() => {
+                        this.successPopup.style.display = 'none';
+                        this.redirectToLogin();
+                    }, 3000);
+                }, 3000); // Simulate a 3-second payment process
+            }
+
+            redirectToLogin() {
+                // Replace this with the code to redirect to login.html
+                window.location.href = 'login.html';
+            }
         }
+
+        // Create an instance of the PaymentConfirmation class
+        const paymentConfirmation = new PaymentConfirmation();
     </script>
 </body>
 </html>
+

@@ -1158,30 +1158,13 @@ h3 {
   }
 }
 
-/* line 100, ../../Arafath/CL/December/236. Event-02/HTML/scss/_header.scss */
-.header-area .main-header-area .buy_tkt .book_btn a {
-  background: #fff;
-
-  font-family: "Anton", sans-serif;
-  padding: 12px 40px;
-  font-size: 16px;
-  font-weight: 500;
-  border: 1px solid transparent;
-
-  color: #000;
-  -webkit-border-radius: 0px;
-  -moz-border-radius: 0px;
-  border-radius: 25px;
-  text-transform: capitalize;
-}
-
 @media (min-width: 992px) and (max-width: 1200px) {
   /* line 100, ../../Arafath/CL/December/236. Event-02/HTML/scss/_header.scss */
   .header-area .main-header-area .buy_tkt .book_btn a {
     background: #fff;
-
+    margin-top: 5px;
     font-family: "Anton", sans-serif;
-    padding: 12px 40px;
+    padding: 5px 20px;
     font-size: 16px;
     font-weight: 500;
     border: 1px solid transparent;
@@ -5943,7 +5926,7 @@ html {
   font-weight: 300;
   border: 0;
   border: 1px solid #c38154;
-  border-radius: 25px;
+  border-radius: 10px;
   text-align: center;
   color: #fff !important;
   text-transform: capitalize;
@@ -5954,4 +5937,21 @@ html {
   background: #fff;
   color: #c38154 !important;
   border: 1px solid #c38154;
+}
+.book_btn {
+  background: #fff;
+  margin-top: 5px;
+  font-family: "Anton", sans-serif;
+  padding: 5px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  border: 1px solid transparent;
+  color: #000;
+  border-radius: 25px;
+  text-transform: capitalize;
+}
+#searchInput {
+  border-radius: 15px;
+  float: left;
+  margin-right: 15px;
 }

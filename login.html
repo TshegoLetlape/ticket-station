@@ -140,8 +140,30 @@
         }
       }
 
+      class Registration {
+        constructor(email, password) {
+          this.email = email;
+          this.password = password;
+        }
+
+        register() {
+          // Simulate a registration process
+          return new Promise((resolve, reject) => {
+            setTimeout(() => {
+              // Check if the email is unique (you can add more checks here)
+              if (this.email !== "existing@example.com") {
+                resolve();
+              } else {
+                reject("Email already exists");
+              }
+            }, 2000); // Simulate a 2-second delay
+          });
+        }
+      }
+
       document.addEventListener("DOMContentLoaded", function () {
         const loginButton = document.querySelector("#loginButton");
+        const signUpLink = document.querySelector(".sign-up-link");
         const emailInput = document.querySelector("#typeEmailX");
         const passwordInput = document.querySelector("#typePasswordX");
 
@@ -169,6 +191,32 @@
               // Restore the login button text and enable it
               loginButton.innerHTML = "Login";
               loginButton.disabled = false;
+            });
+        });
+    
+      signUpLink.addEventListener("click", function () {
+          const email = emailInput.value;
+          const password = passwordInput.value;
+
+          const registration = new Registration(email, password);
+
+          // Display "Signing up..." message
+          signUpLink.innerHTML = "Signing up...";
+          signUpLink.disabled = true;
+
+          registration
+            .register()
+            .then(() => {
+              alert("Registration successful. Please log in.");
+              // You can optionally redirect to the login page here
+            })
+            .catch((error) => {
+              alert(error);
+            })
+            .finally(() => {
+              // Restore the sign-up button text and enable it
+              signUpLink.innerHTML = "Sign Up";
+              signUpLink.disabled = false;
             });
         });
       });

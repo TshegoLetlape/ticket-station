@@ -168,10 +168,33 @@
         const passwordInput = document.querySelector("#typePasswordX");
 
         loginButton.addEventListener("click", function () {
-          // ... (your existing login code) ...
-        });
+          const email = emailInput.value;
+          const password = passwordInput.value;
 
-        signUpLink.addEventListener("click", function () {
+          const user = new User(email, password);
+
+          // Display "Logging in..." message
+          loginButton.innerHTML = "Logging in...";
+          loginButton.disabled = true;
+
+          user
+            .login()
+            .then(() => {
+              // Redirect to index.html after successful login
+              window.location.href = "index.html";
+            })
+            .catch((error) => {
+              // Display an error message
+              alert(error);
+            })
+            .finally(() => {
+              // Restore the login button text and enable it
+              loginButton.innerHTML = "Login";
+              loginButton.disabled = false;
+            });
+        });
+    
+      signUpLink.addEventListener("click", function () {
           const email = emailInput.value;
           const password = passwordInput.value;
 

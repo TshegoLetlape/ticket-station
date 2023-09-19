@@ -738,6 +738,13 @@
     <script src="js/main.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
+  // Add event listener to the form
+  document.getElementById("search").onsubmit = function(event) {
+    event.preventDefault(); // Prevent form submission
+
+    search(); // Call the search function
+  };
+      
   function search() {
   var searchInput = document.getElementById("searchInput").value;
   var searchResults = document.getElementById("searchResults");

@@ -140,35 +140,60 @@
         }
       }
 
+      class Registration {
+        constructor(email, password) {
+          this.email = email;
+          this.password = password;
+        }
+
+        register() {
+          // Simulate a registration process
+          return new Promise((resolve, reject) => {
+            setTimeout(() => {
+              // Check if the email is unique (you can add more checks here)
+              if (this.email !== "existing@example.com") {
+                resolve();
+              } else {
+                reject("Email already exists");
+              }
+            }, 2000); // Simulate a 2-second delay
+          });
+        }
+      }
+
       document.addEventListener("DOMContentLoaded", function () {
         const loginButton = document.querySelector("#loginButton");
+        const signUpLink = document.querySelector(".sign-up-link");
         const emailInput = document.querySelector("#typeEmailX");
         const passwordInput = document.querySelector("#typePasswordX");
 
         loginButton.addEventListener("click", function () {
+          // ... (your existing login code) ...
+        });
+
+        signUpLink.addEventListener("click", function () {
           const email = emailInput.value;
           const password = passwordInput.value;
 
-          const user = new User(email, password);
+          const registration = new Registration(email, password);
 
-          // Display "Logging in..." message
-          loginButton.innerHTML = "Logging in...";
-          loginButton.disabled = true;
+          // Display "Signing up..." message
+          signUpLink.innerHTML = "Signing up...";
+          signUpLink.disabled = true;
 
-          user
-            .login()
+          registration
+            .register()
             .then(() => {
-              // Redirect to index.html after successful login
-              window.location.href = "index.html";
+              alert("Registration successful. Please log in.");
+              // You can optionally redirect to the login page here
             })
             .catch((error) => {
-              // Display an error message
               alert(error);
             })
             .finally(() => {
-              // Restore the login button text and enable it
-              loginButton.innerHTML = "Login";
-              loginButton.disabled = false;
+              // Restore the sign-up button text and enable it
+              signUpLink.innerHTML = "Sign Up";
+              signUpLink.disabled = false;
             });
         });
       });

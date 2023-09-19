@@ -137,7 +137,7 @@
                   <table class="table">
                     <thead>
                       <tr>
-                        <th scope="col" class="h5">MUSICEVE-NT TICKET</th>
+                        <th scope="col" class="h5">EVENT TICKET</th>
                         <th scope="col">Format</th>
                         <th scope="col">Quantity</th>
                         <th scope="col">Price</th>
@@ -145,291 +145,155 @@
                     </thead>
                     <tbody>
                       <tr>
-                        <th scope="row">
-                          <div class="d-flex align-items-center">
-                            <img
-                              src="img/cart/musiceve2.jpg"
-                              class="img-fluid rounded-3"
-                              style="width: 120px"
-                              alt="Book"
-                            />
-
-                            <div class="flex-column ms-4">
-                              <p class="mb-2">GENERAL TICKET</p>
-                              <p class="mb-0">
-                                31 DeC, 2023 FNB Stadium, Johannesburg
-                              </p>
-                            </div>
-                          </div>
-                        </th>
-                        <td class="align-middle">
-                          <p class="mb-0" style="font-weight: 500">Digital</p>
-                        </td>
-                        <td class="align-middle">
-                          <div class="d-flex flex-row">
-                            <button
-                              class="btn btn-link px-2"
-                              onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
-                            >
-                              <i class="fas fa-minus"></i>
-                            </button>
-
-                            <input
-                              id="form1"
-                              min="0"
-                              name="quantity"
-                              value="2"
-                              type="number"
-                              class="form-control form-control-sm"
-                              style="width: 50px"
-                            />
-
-                            <button
-                              class="btn btn-link px-2"
-                              onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
-                            >
-                              <i class="fas fa-plus"></i>
-                            </button>
+                        <td>
+                          <img
+                            src="img/cart/musiceve2.jpg"
+                            class="img-fluid rounded-3"
+                            style="width: 120px"
+                            alt="General Ticket"
+                          />
+                          <div class="flex-column ms-4">
+                            <p class="mb-2">GENERAL TICKET</p>
+                            <p class="mb-0">
+                              31 Dec, 2023 FNB Stadium, Johannesburg
+                            </p>
                           </div>
                         </td>
-                        <td class="align-middle">
-                          <p class="mb-0" style="font-weight: 500">R4500</p>
+                        <td>Format</td>
+                        <td>
+                          <input
+                            type="number"
+                            id="generalQuantity"
+                            value="0"
+                            min="0"
+                          />
                         </td>
+                        <td id="generalPrice">ZAR0</td>
                       </tr>
                       <tr>
-                        <th scope="row" class="border-bottom-0">
-                          <div class="d-flex align-items-center">
-                            <img
-                              src="img/cart/musiceve1.jpeg"
-                              class="img-fluid rounded-3"
-                              style="width: 120px"
-                              alt="Book"
-                            />
-                            <div class="flex-column ms-4">
-                              <p class="mb-2">VIP TICKET</p>
-                              <p class="mb-0">
-                                31 DeC, 2023 FNB Stadium, Johannesburg
-                              </p>
-                            </div>
-                          </div>
-                        </th>
-                        <td class="align-middle border-bottom-0">
-                          <p class="mb-0" style="font-weight: 500">Paperback</p>
-                        </td>
-                        <td class="align-middle border-bottom-0">
-                          <div class="d-flex flex-row">
-                            <button
-                              class="btn btn-link px-2"
-                              onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
-                            >
-                              <i class="fas fa-minus"></i>
-                            </button>
-
-                            <input
-                              id="form1"
-                              min="0"
-                              name="quantity"
-                              value="1"
-                              type="number"
-                              class="form-control form-control-sm"
-                              style="width: 50px"
-                            />
-
-                            <button
-                              class="btn btn-link px-2"
-                              onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
-                            >
-                              <i class="fas fa-plus"></i>
-                            </button>
+                        <td>
+                          <img
+                            src="img/cart/musiceve1.jpeg"
+                            class="img-fluid rounded-3"
+                            style="width: 120px"
+                            alt="VIP Ticket"
+                          />
+                          <div class="flex-column ms-4">
+                            <p class="mb-2">VIP TICKET</p>
+                            <p class="mb-0">
+                              31 Dec, 2023 FNB Stadium, Johannesburg
+                            </p>
                           </div>
                         </td>
-                        <td class="align-middle border-bottom-0">
-                          <p class="mb-0" style="font-weight: 500">R7000</p>
+                        <td>Format</td>
+                        <td>
+                          <input
+                            type="number"
+                            id="vipQuantity"
+                            value="0"
+                            min="0"
+                          />
                         </td>
+                        <td id="vipPrice">ZAR0</td>
+                      </tr>
+                      <tr>
+                        <td colspan="3">Shipping</td>
+                        <td id="shippingPrice">ZAR150</td>
                       </tr>
                     </tbody>
+                    <tfoot>
+                      <tr>
+                        <td colspan="3">Total</td>
+                        <td id="totalPrice">ZAR0</td>
+                      </tr>
+                    </tfoot>
                   </table>
-                </div>
-
-                <div
-                  class="card shadow-2-strong mb-5 mb-lg-0"
-                  style="border-radius: 16px"
-                >
-                  <div class="card-body p-4">
-                    <div class="row">
-                      <div class="col-md-6 col-lg-4 col-xl-3 mb-4 mb-md-0">
-                        <form>
-                          <div class="d-flex flex-row pb-3">
-                            <div class="d-flex align-items-center pe-2">
-                              <input
-                                class="form-check-input"
-                                type="radio"
-                                name="radioNoLabel"
-                                id="radioNoLabel1v"
-                                value=""
-                                aria-label="..."
-                                checked
-                              />
-                            </div>
-                            <div class="rounded border w-100 p-3">
-                              <p class="d-flex align-items-center mb-0">
-                                <i
-                                  class="fab fa-cc-mastercard fa-2x text-dark pe-2"
-                                ></i
-                                >Credit Card
-                              </p>
-                            </div>
-                          </div>
-                          <div class="d-flex flex-row pb-3">
-                            <div class="d-flex align-items-center pe-2">
-                              <input
-                                class="form-check-input"
-                                type="radio"
-                                name="radioNoLabel"
-                                id="radioNoLabel2v"
-                                value=""
-                                aria-label="..."
-                              />
-                            </div>
-                            <div class="rounded border w-100 p-3">
-                              <p class="d-flex align-items-center mb-0">
-                                <i
-                                  class="fab fa-cc-visa fa-2x fa-lg text-dark pe-2"
-                                ></i
-                                >Debit Card
-                              </p>
-                            </div>
-                          </div>
-                          <div class="d-flex flex-row">
-                            <div class="d-flex align-items-center pe-2">
-                              <input
-                                class="form-check-input"
-                                type="radio"
-                                name="radioNoLabel"
-                                id="radioNoLabel3v"
-                                value=""
-                                aria-label="..."
-                              />
-                            </div>
-                            <div class="rounded border w-100 p-3">
-                              <p class="d-flex align-items-center mb-0">
-                                <i
-                                  class="fab fa-cc-paypal fa-2x fa-lg text-dark pe-2"
-                                ></i
-                                >PayPal
-                              </p>
-                            </div>
-                          </div>
-                        </form>
-                      </div>
-                      <div class="col-md-6 col-lg-4 col-xl-6">
-                        <div class="row">
-                          <div class="col-12 col-xl-6">
-                            <div class="form-outline mb-4 mb-xl-5">
-                              <input
-                                type="text"
-                                id="typeName"
-                                class="form-control form-control-lg"
-                                siez="17"
-                                placeholder="Kissmart Tshabalala"
-                              />
-                              <label class="form-label" for="typeName"
-                                >Name on card</label
-                              >
-                            </div>
-
-                            <div class="form-outline mb-4 mb-xl-5">
-                              <input
-                                type="text"
-                                id="typeExp"
-                                class="form-control form-control-lg"
-                                placeholder="MM/YY"
-                                size="7"
-                                id="exp"
-                                minlength="7"
-                                maxlength="7"
-                              />
-                              <label class="form-label" for="typeExp"
-                                >Expiration</label
-                              >
-                            </div>
-                          </div>
-                          <div class="col-12 col-xl-6">
-                            <div class="form-outline mb-4 mb-xl-5">
-                              <input
-                                type="text"
-                                id="typeText"
-                                class="form-control form-control-lg"
-                                siez="17"
-                                placeholder="1111 2222 3333 4444"
-                                minlength="19"
-                                maxlength="19"
-                              />
-                              <label class="form-label" for="typeText"
-                                >Card Number</label
-                              >
-                            </div>
-
-                            <div class="form-outline mb-4 mb-xl-5">
-                              <input
-                                type="password"
-                                id="typeText"
-                                class="form-control form-control-lg"
-                                placeholder="&#9679;&#9679;&#9679;"
-                                size="1"
-                                minlength="3"
-                                maxlength="3"
-                              />
-                              <label class="form-label" for="typeText"
-                                >Cvv</label
-                              >
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-lg-4 col-xl-3">
-                        <div
-                          class="d-flex justify-content-between"
-                          style="font-weight: 500"
-                        >
-                          <p class="mb-2">Subtotal</p>
-                          <p class="mb-2">R7320.00</p>
-                        </div>
-
-                        <div
-                          class="d-flex justify-content-between"
-                          style="font-weight: 500"
-                        >
-                          <p class="mb-0">Shipping</p>
-                          <p class="mb-0"><R200 class="00"></R200></p>
-                        </div>
-
-                        <hr class="my-4" />
-
-                        <div
-                          class="d-flex justify-content-between mb-4"
-                          style="font-weight: 500"
-                        >
-                          <p class="mb-2">Total (tax included)</p>
-                          <p class="mb-2"><R7500 class="00"></R7500></p>
-                        </div>
-
-                        <div class="d-flex justify-content-between">
-                          <a href="gateway.html"
-                            ><button type="button" class="btn-block btn-lg">
-                              Checkout
-                            </button></a
-                          >
-                          <span><R7500 class="00"></R7500></span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
           </div>
         </section>
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-6">
+              <h2>Payment Information</h2>
+              <form>
+                <!-- Payment method selection -->
+                <div class="mb-3">
+                  <label for="paymentMethod">Select Payment Method:</label>
+                  <select id="paymentMethod" class="form-select" required>
+                    <option value="creditCard">Credit Card</option>
+                    <option value="debitCard">Debit Card</option>
+                    <option value="paypal">PayPal</option>
+                  </select>
+                </div>
+
+                <!-- Name on Card -->
+                <div class="mb-3">
+                  <label for="nameOnCard">Name on Card:</label>
+                  <input
+                    type="text"
+                    id="nameOnCard"
+                    class="form-control"
+                    required
+                  />
+                </div>
+
+                <!-- Card Number -->
+                <div class="mb-3">
+                  <label for="cardNumber">Card Number:</label>
+                  <input
+                    type="text"
+                    id="cardNumber"
+                    class="form-control"
+                    required
+                  />
+                </div>
+
+                <!-- Expiration Date -->
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label for="expirationMonth">Expiration Month:</label>
+                    <input
+                      type="text"
+                      id="expirationMonth"
+                      class="form-control"
+                      required
+                    />
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="expirationYear">Expiration Year:</label>
+                    <input
+                      type="text"
+                      id="expirationYear"
+                      class="form-control"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <!-- CVV -->
+                <div class="mb-3">
+                  <label for="cvv">CVV:</label>
+                  <input type="text" id="cvv" class="form-control" required />
+                </div>
+
+                <!-- Checkout Button -->
+                <button
+                  type="button"
+                  id="checkoutButton"
+                  class="btn btn-primary"
+                >
+                  Checkout
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- Popup Message -->
+        <div id="popup" class="popup">Validating payment...</div>
+
         <!-- cart ends here -->
       </div>
     </div>
@@ -568,5 +432,86 @@
     <script src="js/mail-script.js"></script>
 
     <script src="js/main.js"></script>
+
+    <!-- Cart Script -->
+    <script>
+      class Ticket {
+        constructor(price, quantityInputId, priceCellId) {
+          this.price = price;
+          this.quantityInput = document.getElementById(quantityInputId);
+          this.priceCell = document.getElementById(priceCellId);
+          this.quantityInput.addEventListener(
+            "input",
+            this.calculateTotal.bind(this)
+          );
+        }
+
+        calculateTotal() {
+          const quantity = parseInt(this.quantityInput.value);
+          const total = quantity * this.price;
+          this.priceCell.textContent = `ZAR${total}`;
+          this.updateTotal();
+        }
+
+        updateTotal() {
+          const generalTotal = parseInt(
+            document
+              .getElementById("generalPrice")
+              .textContent.replace("ZAR", "")
+          );
+          const vipTotal = parseInt(
+            document.getElementById("vipPrice").textContent.replace("ZAR", "")
+          );
+          const shippingPrice = 150; // R150
+          const total = generalTotal + vipTotal + shippingPrice;
+          document.getElementById("totalPrice").textContent = `ZAR${total}`;
+        }
+      }
+
+      class PaymentForm {
+        constructor() {
+          this.paymentMethodSelect = document.getElementById("paymentMethod");
+          this.nameOnCardInput = document.getElementById("nameOnCard");
+          this.cardNumberInput = document.getElementById("cardNumber");
+          this.expirationMonthInput =
+            document.getElementById("expirationMonth");
+          this.expirationYearInput = document.getElementById("expirationYear");
+          this.cvvInput = document.getElementById("cvv");
+          this.checkoutButton = document.getElementById("checkoutButton");
+
+          this.paymentMethodSelect.addEventListener(
+            "change",
+            this.handlePaymentMethodChange.bind(this)
+          );
+          this.checkoutButton.addEventListener(
+            "click",
+            this.handleCheckout.bind(this)
+          );
+        }
+
+        handlePaymentMethodChange() {
+          // You can add logic here to show/hide payment-related fields based on the selected method
+        }
+
+        handleCheckout() {
+          // Show the validating payment popup
+          const popup = document.getElementById("popup");
+          popup.style.display = "block";
+
+          // Simulate a 10-second delay (10000 milliseconds)
+          setTimeout(() => {
+            // After the delay, redirect to gateway.html
+            window.location.href = "gateway.html";
+          }, 10000);
+
+          // You can add payment validation logic here if needed.
+        }
+      }
+
+      const generalTicket = new Ticket(4500, "generalQuantity", "generalPrice");
+      const vipTicket = new Ticket(7000, "vipQuantity", "vipPrice");
+
+      const paymentForm = new PaymentForm();
+    </script>
   </body>
 </html>

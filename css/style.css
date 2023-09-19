@@ -4204,17 +4204,6 @@ h6 {
   transition: 0.5s;
 }
 
-/* line 14, ../../Arafath/CL/December/236. Event-02/HTML/scss/_blog.scss */
-.blog_area a:hover,
-.blog_area a :hover {
-  background: -webkit-linear-gradient(131deg, #ff4533 0%, #ff4533 99%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-decoration: none;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
-
 /* line 24, ../../Arafath/CL/December/236. Event-02/HTML/scss/_blog.scss */
 .single-blog {
   overflow: hidden;

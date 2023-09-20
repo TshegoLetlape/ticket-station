@@ -11,10 +11,30 @@
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png" />
     <!-- Place favicon.ico in the root directory -->
 
-    <!-- CSS here --><style>
+    <!-- CSS here -->
+    <style>
       * {
         margin: 0;
         padding: 0;
+      }
+      .search-container {
+        background-color: transparent; /* Transparent background */
+        padding: 10px; /* Add padding for spacing */
+      }
+
+      #searchResults {
+        position: absolute; /* Position the results absolutely */
+        top: 100%; /* Position it just below the search container */
+        left: 0;
+        width: 100%;
+        background-color: transparent; /* Transparent white background */
+        z-index: 1; /* Ensure it's above other content */
+        display: none; /* Initially hide the results */
+        padding: 10px; /* Add padding for spacing */
+      }
+
+      #searchResults.show {
+        display: block; /* Show the results when needed */
       }
 
       /* Default Design */
@@ -43,8 +63,7 @@
       }
 
       /* For Tablet View */
-      @media screen and (min-device-width: 768px)
-      and (max-device-width: 1024px) {
+      @media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
         .gfg-div {
           width: 400px;
           height: 400px;
@@ -54,8 +73,7 @@
       }
 
       /* For Mobile Portrait View */
-      @media screen and (max-device-width: 480px)
-      and (orientation: portrait) {
+      @media screen and (max-device-width: 480px) and (orientation: portrait) {
         .gfg-div {
           width: 200px;
           height: 200px;
@@ -65,8 +83,7 @@
       }
 
       /* For Mobile Landscape View */
-      @media screen and (max-device-width: 640px)
-      and (orientation: landscape) {
+      @media screen and (max-device-width: 640px) and (orientation: landscape) {
         .gfg-div {
           width: 400px;
           height: 200px;
@@ -76,8 +93,7 @@
       }
 
       /* For Mobile Phones Portrait or Landscape View */
-      @media screen
-      and (max-device-width: 640px) {
+      @media screen and (max-device-width: 640px) {
         .gfg-div {
           width: 400px;
           height: 200px;
@@ -87,8 +103,7 @@
       }
 
       /* For iPhone 4 Portrait or Landscape View */
-      @media screen and (min-device-width: 320px)
-      and (-webkit-min-device-pixel-ratio: 2) {
+      @media screen and (min-device-width: 320px) and (-webkit-min-device-pixel-ratio: 2) {
         .gfg-div {
           width: 400px;
           height: 400px;
@@ -98,9 +113,7 @@
       }
 
       /* For iPhone 5 Portrait or Landscape View */
-      @media (device-height: 568px)
-      and (device-width: 320px)
-      and (-webkit-min-device-pixel-ratio: 2) {
+      @media (device-height: 568px) and (device-width: 320px) and (-webkit-min-device-pixel-ratio: 2) {
         .gfg-div {
           width: 400px;
           height: 400px;
@@ -110,9 +123,7 @@
       }
 
       /* For iPhone 6 and 6 plus Portrait or Landscape View */
-      @media (min-device-height: 667px)
-      and (min-device-width: 375px)
-      and (-webkit-min-device-pixel-ratio: 3) {
+      @media (min-device-height: 667px) and (min-device-width: 375px) and (-webkit-min-device-pixel-ratio: 3) {
         .gfg-div {
           width: 400px;
           height: 400px;
@@ -134,7 +145,6 @@
 
     <link rel="stylesheet" href="css/style.css" />
     <!-- <link rel="stylesheet" href="css/responsive.css"> -->
-
   </head>
 
   <body>
@@ -191,19 +201,25 @@
                   </div>
                 </div>
                 <div class="col-xl-3 col-lg-3 d-none d-lg-block">
-                  <div class="col-xl-3 col-lg-3 d-none d-lg-block">
-                    <div class="search-login-container">
-                <input type="text" id="searchInput" placeholder="Search for events or artists">
-                  <button id="enterButton"
-                  onclick="search()">Search</button>
-                    <div id="searchResults">
-                    </div>
+                  <div class="search-login-container">
+                    <form class="search-form">
+                      <div class="search-container">
+                        <input
+                          type="text"
+                          id="searchInput"
+                          placeholder="Search for events or artists..."
+                        />
+                      </div>
+                      <div id="searchResults"></div>
+                    </form>
                     <div class="buy_tkt">
                       <div class="book_btn d-none d-lg-block">
                         <a href="login.html">Login</a>
+                      </div>
                     </div>
                   </div>
                 </div>
+
                 <div class="col-12">
                   <div class="mobile_menu d-block d-lg-none"></div>
                 </div>
@@ -841,7 +857,6 @@
     <script src="js/jquery.magnific-popup.min.js"></script>
     <script src="js/tilt.jquery.js"></script>
     <script src="js/plugins.js"></script>
-    
 
     <!--contact js-->
     <script src="js/contact.js"></script>
@@ -851,37 +866,49 @@
     <script src="js/mail-script.js"></script>
 
     <script src="js/main.js"></script>
-    
+
     <script>
-  // Add event listener to the form
-  document.getElementById("search").onsubmit = function(event) {
-    event.preventDefault(); // Prevent form submission
+      var searchInput = document.getElementById("searchInput");
+      var searchResults = document.getElementById("searchResults");
 
-    search(); // Call the search function
-  };
-      
-  function search() {
-  var searchInput = document.getElementById("searchInput").value;
-  var searchResults = document.getElementById("searchResults");
+      // Add event listener to the input field for keydown event
+      searchInput.addEventListener("keydown", function (event) {
+        if (event.keyCode === 13) {
+          event.preventDefault(); // Prevent form submission
+          search(); // Call the search function when Enter key is pressed
+        }
+      });
 
-  // Perform search logic here, matching keywords or artist names with upcoming events
+      function search() {
+        var searchText = searchInput.value.trim();
 
-  var results = [
-    { title: "MusicEvent", artist: "Beyonce" },
-    { title: "MusicEvent", artist: "Burna Boy" },
-    { title: "MusicEvent", artist: "SZA" }
-  ];
+        // Perform search logic here, matching keywords or artist names with upcoming events
+        var results = [
+          { title: "MusicEvent", artist: "Beyonce" },
+          { title: "MusicEvent", artist: "Burna Boy" },
+          { title: "MusicEvent", artist: "SZA" },
+        ];
 
-  // Display search results
-  searchResults.innerHTML = "";
-  for (var i = 0; i < results.length; i++) {
-    var result = results[i];
-    var resultElement = document.createElement("div");
-    resultElement.innerHTML = "<h3>" + result.title + "</h3><p>Artist: " + result.artist + "</p>";
-    searchResults.appendChild(resultElement);
-  }
+        // Display search results
+        searchResults.innerHTML = "";
+
+        if (searchText) {
+          for (var i = 0; i < results.length; i++) {
+            var result = results[i];
+            var resultElement = document.createElement("div");
+            resultElement.innerHTML =
+              "<h3>" +
+              result.title +
+              "</h3><p>Artist: " +
+              result.artist +
+              "</p>";
+            searchResults.appendChild(resultElement);
           }
-        
+          searchResults.classList.add("show"); // Show the results container
+        } else {
+          searchResults.classList.remove("show"); // Hide the results container if the input is empty
+        }
+      }
     </script>
   </body>
 </html>

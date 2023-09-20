@@ -5929,7 +5929,7 @@ html {
 }
 .book_btn {
   background: #fff;
-  margin-top: 5px;
+  margin-top: 6px;
   font-family: "Anton", sans-serif;
   padding: 5px 20px;
   font-size: 16px;
@@ -5942,8 +5942,10 @@ html {
 #searchInput {
   border-radius: 15px;
   float: left;
-  margin-right: 15px;
-}
-#enterButton {
-  border-radius: 5px;
+  margin-top: -7px;
+  margin-right: 10px;
+  background: transparent;
+  border: 1 solid currentColor;
+  padding: 4px 2px;
+  color: inherit;
 }

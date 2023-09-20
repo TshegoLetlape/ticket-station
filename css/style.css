@@ -5944,3 +5944,6 @@ html {
   float: left;
   margin-right: 15px;
 }
+#enterButton {
+  border-radius: 5px;
+}

@@ -127,14 +127,8 @@
           // Simulate a login process
           return new Promise((resolve, reject) => {
             setTimeout(() => {
-              if (
-                this.email === "kissmart@musiceve.com" &&
-                this.password === "123456789"
-              ) {
-                resolve();
-              } else {
-                reject("Invalid credentials");
-              }
+              // Remove email and password validation checks
+              resolve();
             }, 2000); // Simulate a 2-second delay
           });
         }
